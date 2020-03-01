@@ -29,8 +29,8 @@ class Gui_Windows(object):
         self.canvas.create_line(20, 20, 20, 620, width=1, arrow=FIRST, fill='white')  # To Y
         self.canvas.create_line(10, 320, 1020, 320, width=1, arrow=LAST, fill='white')  # To X
 
-        self.canvas.create_text(20, 10, text="300 [V]", fill='white')
-        self.canvas.create_text(20, 630, text="-300 [V]", fill='white')
+        self.canvas.create_text(20, 10, text="300 [I]", fill='white')
+        self.canvas.create_text(20, 630, text="-300 [I]", fill='white')
         self.canvas.create_text(10, 310, text="0", fill='white')
         self.canvas.create_text(1030, 310, text="1000", fill='white')
 
