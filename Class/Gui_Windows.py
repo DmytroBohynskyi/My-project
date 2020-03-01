@@ -2,7 +2,7 @@ from tkinter import *
 from Class.control import Control
 
 #Static file
-IMAGE_STATIC = "Image/"
+IMAGE_STATIC = "Class/Image/"
 
 class Gui_Windows(object):
     def __init__(self, master):
