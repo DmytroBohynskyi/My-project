@@ -9,7 +9,7 @@ class Control(object):
         self.A = A
         self.L = L
         self.C = C
-        sim = Control.simulation(self, window)
+        Control.simulation(self, window)
 
     # ----------- Symulacja  -----------
     def simulation(self, windows):
