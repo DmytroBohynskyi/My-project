@@ -1,6 +1,8 @@
 from tkinter import *
 from Class.control import Control
 
+#Static file
+IMAGE_STATIC = "Image/"
 
 class Gui_Windows(object):
     def __init__(self, master):
@@ -66,7 +68,7 @@ class Gui_Windows(object):
         self.rbutton3.place(x=10, y=190)
 
         # ----------- Dodajemy zdjęcie do programu -----------
-        self.photo = PhotoImage(file="")
+        self.photo = PhotoImage(file="{}/RLC.png".format(IMAGE_STATIC))
         self.label_photo = Label(master, image=self.photo)
         self.label_photo.pack(side=BOTTOM)
 
