@@ -1,6 +1,6 @@
 import math
 
-
+#k;j;glghlg
 class Control(object):
 
     def __init__(self, window, R0, R1, A, L, C):
