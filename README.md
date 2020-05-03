@@ -1,5 +1,9 @@
 # Symulacja układu RLC #
 
+## Uwaga!
+Ten projekt był napisana rok temu w momencie, gdy do końca nie rozumiałem, jak pracują klasy.
+Na dzień dzisiejszy ja bym korzystałem z innego podejścia do realizacji tego projekt! Na pewno zrobiłem by inną hierarchie klas, oraz przy możliwości zmieniłem by for na wywołanie generatorów. Co skutkowało by szybszemu działaniu programu oraz wykorzystanie pamięci RAM było by leprze. 
+
 ## Opis ##
 Project był stworzony w ramach projektu studenckiego. Służy do 
 symulacji pracy układu RLC oraz do wykresu przebiegu prądu. 
@@ -14,10 +18,10 @@ Program składa się z trzech części:
 
 #### main.py ####
 Ten plik jest głównym w projekcie. Służy do stworzenia okna głównego 
-oraz wywołania klasy ``Gui_Windows(root)``.
+oraz wywołania modułu ``Gui_Windows(root)``.
 ```python
 from tkinter import *
-from Class.Gui_Windows import Gui_Windows
+from Modul.Gui_Windows import Gui_Windows
 
 if __name__ == '__main__':
     # Create Window
@@ -30,7 +34,7 @@ if __name__ == '__main__':
 ```
 
 #### Class/Gui_Windows.py ####
-W typ pliku znajduje się klasa jaka służy do stworzenia interfejsu GUI.
+W tym module znajduje się klasa jaka służy do stworzenia interfejsu GUI.
 ```python
 class Gui_Windows(object):
     def __init__(self, master):
@@ -40,14 +44,14 @@ class Gui_Windows(object):
         ... 
 ```
 #### Class/congrol.py ####
-W tym pliku znajduję się cała logika projektu. Składa się plik z klasy ``Control``
-, każdy obiekt tej klasy posiada 5 zadawanych przez nas parametrów takich jak :
+Ten moduł odpowiada za logikę projektu. Składa się plik z klasy ``Control``
+, każdy obiekt tej klasy posiada 5 zadawanych przez nas parametrów takich jak:
 1) R0 and R1 - rezystancja 
 2) A - Amplituda
 3) L - Wartości cewki
 4) C - Wartości opornika
 
-oraz przekazywane obiekt GUI.
+oraz przekazywany obiekt Gui_Windows.
 
 ```python
 class Control(object):
@@ -63,7 +67,7 @@ class Control(object):
 
 ###### Control.simulation(self, windows) #######
 Odpowiednio do ustawionych przez nas parametrów wywołuje odpowiednią 
-funkcje.
+Funkcje klasy  Control
 ```python
     def simulation(self, windows):
         self.xy = []

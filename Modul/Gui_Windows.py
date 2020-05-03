@@ -1,10 +1,10 @@
 from tkinter import *
-from Class.control import Control
+from Modul.control import Control
 
 #Static file
-IMAGE_STATIC = "Class/Image/"
+IMAGE_STATIC = "Modul/Image/"
 
-class Gui_Windows(object):
+class Gui_Windows:
     def __init__(self, master):
         master.title("Symulacja obwodu RLC")
         master.geometry('1320x640')
